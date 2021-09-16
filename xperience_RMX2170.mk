@@ -7,14 +7,14 @@
 # Inherit from RMX2170 device
 $(call inherit-product, device/realme/RMX2170/device.mk)
 
-# Inherit some common ShapeShift stuff
-$(call inherit-product, vendor/ssos/config/common_full_phone.mk)
+# Inherit some common xperience stuff
+$(call inherit-product, vendor/xperience/config/common.mk)
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier
-PRODUCT_NAME := ssos_RMX2170
+PRODUCT_NAME := xperience_RMX2170
 PRODUCT_DEVICE := RMX2170
 PRODUCT_BRAND := Realme
 PRODUCT_MODEL := Realme 7 Pro
@@ -31,12 +31,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="RMX2170" \
     TARGET_DEVICE="RMX2170"
 
-# Inherit ShapeShiftOS build stuff.
-TARGET_FACE_UNLOCK_SUPPORTED := true
+# Inherit bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
-EXTRA_FOD_ANIMATIONS := true
-TARGET_USES_BLUR := true
-
-# Inherit ShapeShiftOS common properties.
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.ssos.cpu=SD720G
